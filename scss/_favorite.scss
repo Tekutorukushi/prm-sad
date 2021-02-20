@@ -1,0 +1,48 @@
+.favorite {
+	
+	&__header {
+		margin-bottom: 24px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		
+		h2 {
+			margin: 0;
+		}
+	}
+
+	&-page {
+		margin-top: 48px;
+		
+		.product-item {
+			width: calc(100%/4 - 30px);
+			
+			&__menu {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+@media (max-width: 500px) {
+
+	.favorite-page {
+		margin: 0;
+	}
+
+	.favorite__header {
+
+		.btn-clear {
+			margin-top: 12px;
+		}
+	}
+
+	.product-container {
+		margin: -8px -4px;
+
+		.product-item {
+			margin: 8px 4px;
+			width: calc(100%/2 - 8px);
+		}
+	}
+}

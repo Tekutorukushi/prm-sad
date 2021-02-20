@@ -1,0 +1,153 @@
+.delivery {
+	
+	h2 {
+		margin-bottom: 20px;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		color: var(--color-dark-grey);
+		
+		a {
+			color: var(--color-green);
+			
+			&:hover {
+				color: var(--color-dark-green);
+			}
+		}
+
+		li {
+			position: relative;
+			padding-left: 19px;
+			
+			&:before {
+				content: '';
+				position: absolute;
+				top: 5px;
+				left: 0;
+				width: 7px;
+				height: 13px;
+				background: url('/assets/img/icon/icon-arrow-right.svg') center no-repeat;
+				background-size: contain;
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 8px;
+			}
+		}
+	}
+	
+	&-table {
+		margin-top: 20px;
+		width: 100%;
+		border-collapse: collapse;
+		border: 1px solid #bdbdbd;
+		
+		th {
+			padding: 16px 44px;
+			font-weight: 500;
+			text-align: left;
+			color: var(--color-black);
+			background: rgba(#f2f2f0, .6);
+			border: 1px solid #bdbdbd;
+			
+			&:nth-child(2) {
+				text-align: center;
+			}
+		}
+		
+		td {
+			padding: 12px 44px;
+			color: var(--color-dark-grey);
+			border: 1px solid #bdbdbd;
+			
+			&:nth-child(2) {
+				text-align: center;
+			}
+		}
+	}
+	
+	&-pay {
+		margin-top: 36px;
+		
+		&__container {
+			margin: -12px -15px;
+			margin-top: 16px;
+			display: flex;
+		}
+		
+		&__item {
+			margin: 12px 15px;
+			width: calc(100%/3 - 30px);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			color: var(--color-dark-grey);
+			
+			h4 {
+				margin-bottom: 6px;
+			}
+		}
+		
+		&__icon {
+			margin-bottom: 12px;
+			width: 66px;
+			height: 66px;
+			background-color: rgba(0, 141, 79, .09);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 32px;
+			border-radius: 50%;
+		}
+		
+		h2 {
+			margin-bottom: 12px;
+		}
+		
+		p {
+			margin: 0;
+			color: var(--color-dark-grey);
+		}
+	}
+}
+
+@media (max-width: 500px) {
+
+	.delivery {
+	
+		&-table {
+			margin-right: -8px;
+			margin-left: -8px;
+			width: auto;
+
+			th {
+				padding: 16px 8px;
+			}
+
+			td {
+				padding: 12px 8px;
+				font-size: 14px;
+			}
+		}
+
+		&-pay {
+
+			&__container {
+				margin: 20px 0 0;
+				flex-direction: column;
+			}
+
+			&__item {
+				margin: 0;
+				width: 100%;
+
+				&:not(:last-child) {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}

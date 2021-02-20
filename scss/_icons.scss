@@ -1,0 +1,193 @@
+.logo {
+	width: 27px;
+	height: 44px;
+	background: url('/assets/img/logo.svg') center no-repeat;
+	background-size: contain;
+}
+
+.icon {
+	-webkit-mask-position: center;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: contain;
+	background-color: var(--color-green);
+	flex-shrink: 0;
+}
+
+.icon-point {
+	-webkit-mask-image: url('/assets/img/icon/icon-point.svg');
+}
+
+.icon-phone {
+	-webkit-mask-image: url('/assets/img/icon/icon-phone.svg');
+}
+
+.icon-arrow-down {
+	-webkit-mask-image: url('/assets/img/icon/icon-arrow-down.svg');
+}
+
+.icon-person {
+	-webkit-mask-image: url('/assets/img/icon/icon-person-outline.svg');
+	
+	&.active {
+		-webkit-mask-image: url('/assets/img/icon/icon-person.svg');
+	}
+}
+
+.icon-heart {
+	-webkit-mask-image: url('/assets/img/icon/icon-heart.svg');
+}
+
+.icon-cart {
+	-webkit-mask-image: url('/assets/img/icon/icon-cart.svg');
+}
+
+.icon-cart-outline {
+	-webkit-mask-image: url('/assets/img/icon/icon-cart-outline.svg');
+}
+
+.icon-close {
+	-webkit-mask-image: url('/assets/img/icon/icon-close.svg');
+}
+
+.icon-search {
+	-webkit-mask-image: url('/assets/img/icon/icon-search.svg');
+}
+
+.icon-flowers {
+	-webkit-mask-image: url('/assets/img/icon/icon-flower.svg');
+}
+
+.icon-flowers-home {
+	-webkit-mask-image: url('/assets/img/icon/icon-flower-home.svg');
+}
+
+.icon-seedling {
+	-webkit-mask-image: url('/assets/img/icon/icon-seedling.svg');
+}
+
+.icon-seedlings {
+	-webkit-mask-image: url('/assets/img/icon/icon-seedlings.svg');
+}
+
+.icon-seeds {
+	-webkit-mask-image: url('/assets/img/icon/icon-seeds.svg');
+}
+
+.icon-gardening-tools {
+	-webkit-mask-image: url('/assets/img/icon/icon-gardening-tools.svg');
+}
+
+.icon-vegetable {
+	-webkit-mask-image: url('/assets/img/icon/icon-vegetable.svg');
+}
+
+.icon-agriculture {
+	-webkit-mask-image: url('/assets/img/icon/icon-agriculture.svg');
+}
+
+.icon-promo {
+	width: 97px;
+	height: 35px;
+	background: url('/assets/img/icon/icon-promo.svg') center no-repeat;
+	background-size: contain;
+}
+
+.icon-vk {
+	-webkit-mask-image: url('/assets/img/icon/icon-vk.svg');
+}
+
+.icon-fb {
+	-webkit-mask-image: url('/assets/img/icon/icon-fb.svg');
+}
+
+.icon-facebook-fill {
+	-webkit-mask-image: url('/assets/img/icon/icon-facebook-filled.svg');
+	background-color: #304591;
+}
+
+.icon-instagram-outline {
+	-webkit-mask-image: url('/assets/img/icon/icon-instagram-outlined.svg');
+}
+
+.icon-ok {
+	-webkit-mask-image: url('/assets/img/icon/icon-ok.svg');
+	background-color: #eb722e;
+}
+
+.icon-twitter {
+	-webkit-mask-image: url('/assets/img/icon/icon-twitter-outlined.svg');
+	background-color: #31adf4;
+}
+
+.icon-telegram {
+	-webkit-mask-image: url('/assets/img/icon/icon-telegram.svg');
+	background-color: #2ba5e0;
+}
+
+.icon-link {
+	-webkit-mask-image: url('/assets/img/icon/icon-link-outlined.svg');
+}
+
+.logo-golova {
+	width: 53px;
+	height: 26px;
+	background: url('/assets/img/logo-golova.svg') center no-repeat;
+	background-size: contain;
+}
+
+.icon-mail {
+	-webkit-mask-image: url('/assets/img/icon/icon-mail.svg');
+}
+
+.icon-check-round {
+	-webkit-mask-image: url('/assets/img/icon/icon-check-round.svg');
+}
+
+.icon-favorite {
+	-webkit-mask-image: url('/assets/img/icon/icon-favorite.svg');
+	background-color: var(--color-red);
+	transition: all .2s ease-in-out;
+}
+
+.icon-share {
+	-webkit-mask-image: url('/assets/img/icon/icon-share.svg');
+}
+
+.icon-close-round {
+	-webkit-mask-image: url('/assets/img/icon/icon-close-round.svg');
+}
+
+.icon-star {
+	background: url('/assets/img/icon/icon-star.svg') center no-repeat;
+	background-size: contain;
+}
+
+.icon-star-half {
+	background: url('/assets/img/icon/icon-star-half.svg') center no-repeat;
+	background-size: contain;
+}
+
+.icon-star-fill {
+	background: url('/assets/img/icon/icon-star-fill.svg') center no-repeat;
+	background-size: contain;
+}
+
+.icon-clip {
+	-webkit-mask-image: url('/assets/img/icon/icon-clip.svg');
+}
+
+.icon-delete {
+	-webkit-mask-image: url('/assets/img/icon/icon-delete.svg');
+}
+
+.icon-local-shipping {
+	-webkit-mask-image: url('/assets/img/icon/icon-local-shipping.svg');
+}
+
+.icon-dots {
+	-webkit-mask-image: url('/assets/img/icon/icon-dots.svg');
+}
+
+.icon-filter {
+	-webkit-mask-image: url('/assets/img/icon/icon-filter.svg');
+}

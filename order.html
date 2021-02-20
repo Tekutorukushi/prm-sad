@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<title>Корзина | Пермский сад</title>
+	<meta name="description" content="Пермский сад">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/assets/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#9f00a7">
+	<meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="assets/css/slick.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+	<header class="header">
+		<div class="header-nav">
+			<div class="container">
+				<div class="header-nav__container">
+					<a href="catalog-services.html" class="header-nav__link">Услуги</a>
+					<a href="about.html" class="header-nav__link">О компании</a>
+					<a href="blog.html" class="header-nav__link">Блог</a>
+					<a href="contacts.html" class="header-nav__link">Контакты</a>
+				</div>
+				<div class="header-nav__contact">
+					<a href="#" class="header-nav__link">
+						<span class="icon icon-point"></span>
+						Пермский район, д. Ванюки, ул. Зеленая 43
+					</a>
+					<a href="tel:+73422469455" class="header-nav__link">
+						<span class="icon icon-phone"></span>
+						+7 (342) 246-94-55
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="header-mobile">
+			<div class="header-mobile__row">
+				<a href="catalog-services.html" class="header-mobile__link">Услуги</a>
+				<a href="about.html" class="header-mobile__link">О компании</a>
+				<a href="blog.html" class="header-mobile__link">Блог</a>
+				<a href="contacts.html" class="header-mobile__link">Контакты</a>
+			</div>
+			<div class="header-mobile__row">
+				<a href="catalog.html" class="header-mobile__link">Каталог</a>
+				<a href="order.html" class="header-mobile__link">Корзина</a>
+				<a href="favorite.html" class="header-mobile__link">Избранное</a>
+				<a href="profile.html" class="header-mobile__link">Личный кабинет</a>
+			</div>
+			<div class="header-mobile__row">
+				<a href="#" class="header-mobile__link">
+					<span class="icon icon-point"></span>
+					Пермский район, д. Ванюки, ул. Зеленая 43
+				</a>
+				<a href="tel:+73422469455" class="header-mobile__link">
+					<span class="icon icon-phone"></span>
+					+7 (342) 246-94-55
+				</a>
+			</div>
+		</div>
+		<nav class="navbar">
+			<div class="container">
+				<div class="navbar-toggle-menu">
+					<div class="icon-toggle">
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<a href="/" class="navbar-brand">
+					<div class="logo"></div>
+					<span>Пермский Сад</span>
+				</a>
+				<div class="navbar-group">
+					<div class="navbar-toggle-mobile">Каталог</div>
+					<div class="navbar-toggle">
+						<div class="icon-toggle">
+							<span></span>
+							<span></span>
+						</div>
+						<span>Каталог</span>
+					</div>
+					<form class="navbar-search">
+						<select class="custom-select">
+							<option>Искать везде</option>
+							<option>Срезанные цветы</option>
+							<option>Комнатные цветы</option>
+							<option>Рассада</option>
+							<option>Саженцы</option>
+							<option>Сопутствующие товары</option>
+							<option>Овощи и заготовки</option>
+							<option>Распродажа</option>
+							<option>Услуги</option>
+						</select>
+						<input placeholder="Поиск по сайту">
+						<button type="submit"></button>
+					</form>
+				</div>
+				<div class="navbar-user">
+					<div class="navbar-user__cart-content">
+						<a href="profile.html" class="icon icon-person"></a>
+					</div>
+					<a href="favorite.html" class="icon icon-heart"></a>
+					<div class="navbar-user__cart-content">
+						<div class="icon icon-cart"></div>
+						<div class="navbar-user__cart">
+							<div class="navbar-user__cart--header">
+								<b>Корзина <span>3</span></b>
+								<div class="navbar-user__cart--clear">
+									<div class="icon icon-close"></div>
+									Очистить корзину
+								</div>
+							</div>
+							<div class="navbar-user__cart--body">
+								<div class="navbar-user__cart--body-wrap">
+									<div class="navbar-user__cart--item">
+										<div class="navbar-user__cart--image" style="background-image:url('assets/img/ficus.jpg');"></div>
+										<div class="navbar-user__cart--info">
+											<a href="#">Фикус Даниэль</a>
+											<span>Размер: 50 см</span>
+											<div class="navbar-user__cart--amount">
+												<span class="minus">-</span>
+												<div>
+													<i>1</i> шт.
+												</div>
+												<span class="plus">+</span>
+											</div>
+											<div class="navbar-user__cart--price"><i>560</i> руб.</div>
+										</div>
+									</div>
+									<div class="navbar-user__cart--item">
+										<div class="navbar-user__cart--image" style="background-image:url('assets/img/ficus.jpg');"></div>
+										<div class="navbar-user__cart--info">
+											<a href="#">Фикус Даниэль</a>
+											<span>Размер: 50 см</span>
+											<div class="navbar-user__cart--amount">
+												<span class="minus">-</span>
+												<div>
+													<i>1</i> шт.
+												</div>
+												<span class="plus">+</span>
+											</div>
+											<div class="navbar-user__cart--price"><i>660</i> руб.</div>
+										</div>
+									</div>
+									<div class="navbar-user__cart--item">
+										<div class="navbar-user__cart--image" style="background-image:url('assets/img/ficus.jpg');"></div>
+										<div class="navbar-user__cart--info">
+											<a href="#">Фикус Даниэль</a>
+											<span>Размер: 50 см</span>
+											<div class="navbar-user__cart--amount">
+												<span class="minus">-</span>
+												<div>
+													<i>1</i> шт.
+												</div>
+												<span class="plus">+</span>
+											</div>
+											<div class="navbar-user__cart--price"><i>660</i> руб.</div>
+										</div>
+									</div>
+									<div class="navbar-user__cart--item">
+										<div class="navbar-user__cart--image" style="background-image:url('assets/img/ficus.jpg');"></div>
+										<div class="navbar-user__cart--info">
+											<a href="#">Фикус Даниэль</a>
+											<span>Размер: 50 см</span>
+											<div class="navbar-user__cart--amount">
+												<span class="minus">-</span>
+												<div>
+													<i>1</i> шт.
+												</div>
+												<span class="plus">+</span>
+											</div>
+											<div class="navbar-user__cart--price"><i>660</i> руб.</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="navbar-user__cart--footer">
+								<div class="navbar-user__cart--total">
+									<b>Итого:</b>
+									<b><i>3650</i> руб.</b>
+								</div>
+								<a href="order.html" class="btn-primary">Перейти в корзину</a>
+							</div>
+						</div>
+						<span>1</span>
+					</div>
+				</div>
+			</div>
+			<div class="navbar-menu">
+				<div class="container">
+					<div class="navbar-menu__container">
+						<div class="navbar-menu__nav">
+							<div class="navbar-menu__nav--item">
+								<a href="#" class="navbar-menu__nav--link active">Срезанные цветы</a>
+							</div>
+							<div class="navbar-menu__nav--item">
+								<a href="#" class="navbar-menu__nav--link" data-navlink="indoor-flowers">Комнатные цветы</a>
+							</div>
+							<div class="navbar-menu__nav--item">
+								<a href="#" class="navbar-menu__nav--link" data-navlink="seedling">Рассада</a>
+							</div>
+							<div class="navbar-menu__nav--item">
+								<a href="#" class="navbar-menu__nav--link" data-navlink="saplings">Саженцы</a>
+							</div>
+							<div class="navbar-menu__nav--item">
+								<a href="#" class="navbar-menu__nav--link" data-navlink="related-products">Сопутствующие товары</a>
+							</div>
+							<div class="navbar-menu__nav--item">
+								<a href="#" class="navbar-menu__nav--link">Овощи и заготовки</a>
+							</div>
+							<div class="navbar-menu__nav--item">
+								<a href="#" class="navbar-menu__nav--link">Распродажа</a>
+							</div>
+							<div class="navbar-menu__nav--item">
+								<a href="#" class="navbar-menu__nav--link">Услуги</a>
+							</div>
+						</div>
+						<div class="navbar-menu__sub">
+							<div class="navbar-menu__submenu" id="indoor-flowers">
+								<div class="navbar-menu__submenu--item">
+									<a href="#">Декоративные</a>
+									<ul>
+										<li><a href="#">Деревья</a></li>
+										<li><a href="#">Кустарники</a></li>
+										<li><a href="#">Хвойные растения</a></li>
+									</ul>
+								</div>
+								<div class="navbar-menu__submenu--item">
+									<a href="#">Плодовые</a>
+									<ul>
+										<li><a href="#">Алыча</a></li>
+										<li><a href="#">Груша</a></li>
+										<li><a href="#">Жимолость</a></li>
+										<li><a href="#">Малина</a></li>
+										<li><a href="#">Виноград</a></li>
+										<li><a href="#">Ежевика</a></li>
+										<li><a href="#">Клюква</a></li>
+										<li><a href="#">Облепиха</a></li>
+										<li><a href="#">Черешня</a></li>
+										<li><a href="#">Вишня</a></li>
+										<li><a href="#">Ирга</a></li>
+										<li><a href="#">Крыжовник</a></li>
+										<li><a href="#">Рябина</a></li>
+										<li><a href="#">Яблоня</a></li>
+										<li><a href="#">Голубика</a></li>
+										<li><a href="#">Йошта</a></li>
+										<li><a href="#">Лимонник</a></li>
+										<li><a href="#">Слива</a></li>
+									</ul>
+								</div>
+								<div class="navbar-menu__submenu--item">
+									<a href="#">Розы</a>
+									<ul>
+										<li><a href="#">Флорибунда</a></li>
+										<li><a href="#">Канадские</a></li>
+										<li><a href="#">Плетистые и полуплетистые</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="navbar-menu__submenu" id="seedling">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, ipsa.</div>
+							<div class="navbar-menu__submenu" id="saplings">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis iste minima nam quibusdam repellat. Culpa exercitationem mollitia perspiciatis rerum veniam? Accusamus doloribus eligendi eos eveniet fugiat illo perferendis, quae saepe.</div>
+							<div class="navbar-menu__submenu" id="related-products">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium ad amet aperiam at aut dicta dolor dolorem ea eius enim eveniet exercitationem facere illo illum incidunt itaque laboriosam nostrum odio odit officia perferendis perspiciatis possimus quod quos rem soluta sunt tempora ut, veritatis? Aspernatur dolorem illum optio suscipit voluptate?</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="navbar-mobile">
+			<div class="aside-menu__wrap">
+				<div class="aside-menu__item">
+					<div class="aside-menu__link">Все товары</div>
+				</div>
+				<div class="aside-menu__item">
+					<div class="aside-menu__link">Срезанные цветы</div>
+				</div>
+				<div class="aside-menu__item aside-menu--drop">
+					<div class="aside-menu__link">Комнатные цветы</div>
+					<div class="aside-menu__sub">
+						<div class="aside-menu__sublink">Декоративные</div>
+						<div class="aside-menu__sublink">Плодовые</div>
+						<div class="aside-menu__sublink">Розы</div>
+					</div>
+				</div>
+				<div class="aside-menu__item aside-menu--drop">
+					<div class="aside-menu__link">Рассада</div>
+					<div class="aside-menu__sub">
+						<div class="aside-menu__sublink">Декоративные</div>
+						<div class="aside-menu__sublink">Плодовые</div>
+						<div class="aside-menu__sublink">Розы</div>
+					</div>
+				</div>
+				<div class="aside-menu__item">
+					<div class="aside-menu__link">Саженцы</div>
+				</div>
+				<div class="aside-menu__item">
+					<div class="aside-menu__link">Семена</div>
+				</div>
+				<div class="aside-menu__item">
+					<div class="aside-menu__link">Сопутствующие товары</div>
+				</div>
+				<div class="aside-menu__item">
+					<div class="aside-menu__link">Овощи и заготовки</div>
+				</div>
+				<div class="aside-menu__item">
+					<div class="aside-menu__link">Распродажа</div>
+				</div>
+				<div class="aside-menu__item">
+					<a href="catalog-services.html" class="aside-menu__link">Услуги</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section class="order">
+		<div class="container">
+			<div class="order__header">
+				<h2>Корзина <i>4</i></h2>
+				<div class="btn-clear">
+					<div class="icon icon-delete"></div>
+					<span>Очистить избранное</span>
+				</div>
+			</div>
+			<div class="order__container">
+				<div class="order__content">
+					<div class="order-alert">
+						<div class="order-alert__item">
+							<div class="icon icon-local-shipping"></div>
+							<span>Доставка по Перми: Завтра (17 декабря)</span>
+						</div>
+						<div class="order-alert__item">
+							<div class="icon icon-point"></div>
+							<span>Самовывоз: Сегодня (16 декабря)</span>
+						</div>
+					</div>
+					<div class="order__items">
+						<div class="order-item">
+							<div class="order-item__image" style="background-image:url('assets/img/aloe.jpg');"></div>
+							<div class="order-item__info">
+								<div class="order-item__row">
+									<div class="order-item__name">
+										<a href="#" target="_blank">Алоэ Вера</a>
+										<span>Размер 50 см, Диаметр горшка 18 см</span>
+									</div>
+									<div class="order-item__amount">
+										<span>-</span>
+										<input type="number">
+										<span>+</span>
+									</div>
+									<div class="order-item__price">
+										<b>350 руб.</b>
+										<span>450 руб.</span>
+									</div>
+								</div>
+								<div class="order-item__row">
+									<div class="order-item__button">Добавить в избранное</div>
+									<div class="order-item__button">Удалить</div>
+								</div>
+							</div>
+						</div>
+						<div class="order-item">
+							<div class="order-item__image" style="background-image:url('assets/img/aloe.jpg');"></div>
+							<div class="order-item__info">
+								<div class="order-item__row">
+									<div class="order-item__name">
+										<a href="#" target="_blank">Алоэ Вера</a>
+										<span>Размер 50 см, Диаметр горшка 18 см</span>
+									</div>
+									<div class="order-item__amount">
+										<span>-</span>
+										<input type="number">
+										<span>+</span>
+									</div>
+									<div class="order-item__price">
+										<b>350 руб.</b>
+										<span>450 руб.</span>
+									</div>
+								</div>
+								<div class="order-item__row">
+									<div class="order-item__button added">В избранном</div>
+									<div class="order-item__button">Удалить</div>
+								</div>
+							</div>
+						</div>
+						<div class="order-item sold">
+							<div class="order-item__image" style="background-image:url('assets/img/aloe.jpg');"></div>
+							<div class="order-item__info">
+								<div class="order-item__row">
+									<div class="order-item__name">
+										<a href="#" target="_blank">Смородина Натали (красная), С2</a>
+										<span>Размер 50 см, Диаметр горшка 18 см</span>
+									</div>
+									<div class="order-item__amount">
+										<span>-</span>
+										<input type="number">
+										<span>+</span>
+									</div>
+									<div class="order-item__price">
+										<b>350 руб.</b>
+										<span>Товар закончился</span>
+									</div>
+								</div>
+								<div class="order-item__row">
+									<div class="order-item__button">Добавить в избранное</div>
+									<div class="order-item__button">Удалить</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="total-amount">
+					<div class="total-amount__content">
+						<div class="total-amount__header">
+							<div class="total-amount__label">Ваш заказ</div>
+							<div class="total-amount__count">
+								<span>Товаров:</span>
+								<span>4 шт.</span>
+							</div>
+							<div class="total-amount__sale">
+								<span>Скидка:</span>
+								<span>- 100 руб.</span>
+							</div>
+						</div>
+						<div class="total-amount__footer">
+							<div class="total-amount__total">
+								<span>Итого</span>
+								<b>1160 руб.</b>
+							</div>
+							<div class="total-amount__button">
+								<a href="checkout.html" class="btn-primary btn-small">Перейти к оформлению</a>
+							</div>
+						</div>
+					</div>
+					<div class="order-promo">
+						<div class="order-promo__label">У вас есть промокод?</div>
+						<div class="order-promo__code">
+							<div class="order-promo__code--wrap">
+								<div class="input">
+									<input placeholder="Введите промокод">
+								</div>
+								<div class="input-label">Скидка по вашему промокоду составляет 400 руб.</div>
+								<div class="btn-primary">Применить</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="look-catalog">
+		<div class="container">
+			<h4>Вам также может понравиться</h4>
+			<div class="recommend-goods__container">
+				<div class="product-item">
+					<div class="product-item__wrap">
+						<div class="product-item__menu">
+							<span>
+								<span class="icon icon-search"></span>
+							</span>
+							<span class="favorite-btn">
+								<span class="icon icon-favorite"></span>
+							</span>
+						</div>
+						<div class="product-item__image" style="background-image:url('assets/img/scindapus.jpg');"></div>
+						<div class="product-item__body">
+							<div class="product-item__type">Комнатные цветы</div>
+							<a href="#" class="product-item__name">Сциндаптус</a>
+							<div class="product-item__type">Характеристика: <span>характеристика</span></div>
+						</div>
+						<div class="product-item__footer">
+							<div class="product-item__price sale">
+								<div class="product-item__price--new">160 руб.</div>
+								<div class="product-item__price--old">17 999 руб.</div>
+							</div>
+							<div class="btn-secondary">
+								<div class="icon icon-cart-outline"></div>
+								В корзину
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="product-item">
+					<div class="product-item__wrap">
+						<div class="product-item__menu">
+							<span>
+								<span class="icon icon-search"></span>
+							</span>
+							<span class="favorite-btn">
+								<span class="icon icon-favorite"></span>
+							</span>
+						</div>
+						<div class="product-item__image" style="background-image:url('assets/img/scindapus.jpg');"></div>
+						<div class="product-item__body">
+							<div class="product-item__type">Комнатные цветы</div>
+							<a href="product.html" class="product-item__name">Алоэ Вера</a>
+							<div class="product-item__type">Тип: <span>суккуленты</span></div>
+						</div>
+						<div class="product-item__footer">
+							<div class="product-item__price">
+								<div class="product-item__price--new">99 руб.</div>
+								<div class="product-item__price--old">350 руб.</div>
+							</div>
+							<div class="btn-secondary">
+								<div class="icon icon-cart-outline"></div>
+								В корзину
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="product-item">
+					<div class="product-item__wrap">
+						<div class="product-item__menu">
+							<span>
+								<span class="icon icon-search"></span>
+							</span>
+							<span class="favorite-btn">
+								<span class="icon icon-favorite"></span>
+							</span>
+						</div>
+						<div class="product-item__image" style="background-image:url('assets/img/scindapus.jpg');"></div>
+						<div class="product-item__body">
+							<div class="product-item__type">Комнатные цветы</div>
+							<a href="product.html" class="product-item__name">Пилея, d 12</a>
+							<div class="product-item__type">Характеристика: <span>характеристика</span></div>
+						</div>
+						<div class="product-item__footer">
+							<div class="product-item__price">
+								<div class="product-item__price--new">160 руб.</div>
+								<div class="product-item__price--old">17 999 руб.</div>
+							</div>
+							<div class="btn-secondary">
+								<div class="icon icon-cart-outline"></div>
+								В корзину
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="product-item">
+					<div class="product-item__wrap">
+						<div class="product-item__menu">
+							<span>
+								<span class="icon icon-search"></span>
+							</span>
+							<span class="favorite-btn">
+								<span class="icon icon-favorite"></span>
+							</span>
+						</div>
+						<div class="product-item__image" style="background-image:url('assets/img/scindapus.jpg');"></div>
+						<div class="product-item__body">
+							<div class="product-item__type">Саженцы</div>
+							<a href="product.html" class="product-item__name">Смородина Натали (красная), С2</a>
+							<div class="product-item__type">Характеристика: <span>характеристика</span></div>
+						</div>
+						<div class="product-item__footer">
+							<div class="product-item__price">
+								<div class="product-item__price--new">160 руб.</div>
+								<div class="product-item__price--old">250 руб.</div>
+							</div>
+							<div class="btn-secondary">
+								<div class="icon icon-cart-outline"></div>
+								В корзину
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="footer-wrap">
+			<div class="container">
+				<div class="footer-top">
+					<div class="footer-brand-wrap">
+						<a href="/" class="footer-brand">
+							<div class="logo"></div>
+							<span>Пермский Сад</span>
+						</a>
+					</div>
+					<div class="footer-menu">
+						<div class="col">
+							<a href="catalog.html" class="footer-menu__link">Каталог</a>
+							<a href="catalog-services.html" class="footer-menu__link">Услуги</a>
+							<a href="about.html" class="footer-menu__link">О компании</a>
+							<a href="blog.html" class="footer-menu__link">Блог</a>
+						</div>
+						<div class="col">
+							<a href="contacts.html" class="footer-menu__link">Контакты</a>
+							<a href="delivery-and-payment.html" class="footer-menu__link">Доставка и оплата</a>
+							<a href="warranties-and-returns.html" class="footer-menu__link">Гарантии и возврат</a>
+						</div>
+					</div>
+					<div class="footer-contact">
+						<div class="footer-menu__link"><span class="icon icon-point"></span>Пермский район, д. Ванюки, ул. Зеленая 43</div>
+						<a href="tel:+73422469455" target="_blank" class="footer-menu__link"><span class="icon icon-phone"></span>+7 (342) 246-94-55</a>
+						<a href="mailto:info@prmsad.ru" target="_blank" class="footer-menu__link"><span class="icon icon-mail"></span>info@prmsad.ru</a>
+						<div class="footer-social">
+							<a href="#" target="_blank" class="icon icon-vk"></a>
+							<a href="#" target="_blank" class="icon icon-fb"></a>
+							<a href="#" target="_blank" class="icon icon-instagram-outline"></a>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div class="footer-brand-wrap">
+						<span>2020 © Пермский Сад</span>
+					</div>
+					<div class="footer-links">
+						<a href="#">Публичная оферта</a>
+						<a href="#">Политика обработки персональных данных</a>
+					</div>
+					<a href="#" target="_blank" class="footer-dev">Разработано в <span class="logo-golova"></span></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="assets/js/jquery-3.5.1.min.js"></script>
+	<script src="assets/js/slick.min.js"></script>
+	<script src="assets/js/scripts.js"></script>
+</body>
+</html>

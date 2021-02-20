@@ -1,0 +1,476 @@
+.main-slider {
+	
+	&__slider {
+	
+	}
+	
+	&__item {
+		position: relative;
+		height: 440px;
+		
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	
+	&__container {
+		position: absolute;
+		top: 86px;
+		left: 80px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		
+		h1 {
+			margin-bottom: 14px;
+		}
+		
+		span {
+			margin-bottom: 32px;
+			color: var(--color-dark-grey);
+		}
+	}
+}
+
+.block-advantages {
+	margin-top: 98px;
+	margin-bottom: 98px;
+	
+	&__container {
+		margin: 0 -40px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	&__item {
+		margin: 0 20px;
+		width: calc(100%/4 - 40px);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+		.icon {
+			position: relative;
+			margin-bottom: 12px;
+			width: 66px;
+			height: 66px;
+			background: rgba(0, 141, 79, .09);
+			border-radius: 50%;
+			
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: var(--color-green);
+				-webkit-mask-position: center;
+				-webkit-mask-repeat: no-repeat;
+			}
+			
+			&-badge {
+				
+				&:before {
+					-webkit-mask-size: 27px 33px;
+					-webkit-mask-image: url('/assets/img/icon/icon-badge.svg');
+				}
+			}
+		}
+		
+		h4 {
+			text-align: center;
+		}
+	}
+}
+
+.block-weeks {
+	
+	.slick-prev, .slick-next {
+		top: 32%;
+	}
+	
+	.slick-prev {
+		left: -83px;
+	}
+
+	.slick-next {
+		right: -83px;
+	}
+	
+	.slick-track {
+		display: flex;
+	}
+	
+	.slick-slide {
+		padding: 14px 15px 30px;
+		height: auto;
+	}
+	
+	/* .slick-list {
+		margin: 0 -15px;
+		
+		&:before, &:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			z-index: 1;
+			width: 15px;
+			background: #fbfbfb;
+		}
+		
+		&:before {
+			left: 0;
+		}
+
+		&:after {
+			right: 0;
+		}
+	} */
+	
+	.block-center {
+		margin: 6px auto 0;
+	}
+}
+
+.slick-slider .product-item{
+	height: 100%;
+}
+
+.block-assortment {
+	margin-top: 96px;
+	
+	&__container {
+		margin: -15px -10px;
+		display: flex;
+		flex-wrap: wrap;
+		
+		.btn-secondary, .btn-primary {
+			margin: 15px 10px;
+			padding: 16px 40px;
+			width: calc(100%/3 - 30px);
+			height: 76px;
+			
+			.icon {
+				margin-right: 12px;
+				width: 44px;
+				height: 44px;
+			}
+		}
+		
+		.btn-secondary {
+			justify-content: flex-start;
+		}
+	}
+}
+
+.block-promo {
+	margin-top: 108px;
+	
+	&__container {
+		display: flex;
+		
+		> * {
+			width: 50%;
+		}
+		
+		> div {
+			padding-left: 78px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			background: #f4f7f3;
+		}
+		
+		h3 {
+			margin-top: 4px;
+			margin-bottom: 8px;
+		}
+		
+		span {
+			margin-bottom: 28px;
+			display: block;
+			color: #4b4b4b;
+		}
+	}
+}
+
+.block-blog {
+	margin-top: 96px;
+	margin-bottom: 96px;
+	
+	&__container {
+		margin: -12px -15px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	.blog-item {
+		width: calc(100%/3 - 30px);
+	}
+	
+	.block-center {
+		margin-top: 36px;
+	}
+}
+
+.block-insta {
+	padding-top: 60px;
+	padding-bottom: 124px;
+	background: #f4f7f3;
+	
+	&__container {
+		margin: -15px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	&__item {
+		position: relative;
+		margin: 15px;
+		padding-bottom: calc(100%/3 - 30px);
+		width: calc(100%/3 - 30px);
+		display: block;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		transition: all .2s ease-in-out;
+		
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			background: rgba(0, 0, 0, .21);
+			transition: all .2s ease-in-out;
+		}
+		
+		&:hover {
+
+			&:before {
+				opacity: 1;
+			}
+			
+			> span {
+				opacity: 1;
+			}
+		}
+		
+		> span {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 16px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			opacity: 0;
+			font-weight: 500;
+			letter-spacing: .015em;
+			color: #ffffff;
+			transition: all .2s ease-in-out;
+		}
+		
+		.icon {
+			margin-right: 8px;
+			width: 32px;
+			height: 32px;
+			background-color: #ffffff;
+		}
+	}
+	
+	+ .footer .footer-wrap{
+		margin-top: 0;
+	}
+}
+
+@media (max-width: 500px) {
+
+	.main-slider {
+		
+		&__item {
+			height: 338px;
+		}
+		
+		&__container {
+			top: 20px;
+			left: 14px;
+			right: 14px;
+			
+			h1 {
+				margin-bottom: 10px;
+			}
+			
+			span {
+				margin-bottom: 20px;
+				max-width: 175px;
+				font-size: 14px;
+			}
+		}
+		
+		.container {
+			padding-right: 6px;
+			padding-left: 6px;
+		}
+	}
+	
+	.block-advantages {
+		margin-top: 40px;
+		margin-bottom: 47px;
+		
+		h4 {
+			font-size: 16px;
+		}
+		
+		&__container {
+			margin: -12px -8px;
+		}
+		
+		&__item {
+			margin: 12px 4px;
+			width: calc(100%/2 - 16px);
+		}
+	}
+	
+	.block-weeks {
+		
+		&__slider {
+			margin-bottom: 0 !important;
+			padding-bottom: 36px;
+		}
+		
+		.slick-list {
+			margin-right: -4px;
+			margin-left: -4px;
+		}
+		
+		.slick-slide {
+			padding: 0 4px;
+		}
+	}
+	
+	.block-assortment {
+		margin-top: 52px;
+		
+		&__container {
+			margin: 0;
+			
+			.btn-secondary, .btn-primary {
+				margin: 0 0 8px;
+				padding: 10px 16px;
+				width: 100%;
+				height: 64px;
+				font-size: 16px;
+				
+				.icon {
+					width: 48px !important;
+					height: 48px !important;
+				}
+			}
+			
+			.btn-primary {
+				margin: 8px 0 0;
+			}
+		}
+	}
+	
+	.block-promo {
+		margin-top: 48px;
+		
+		&__container {
+			flex-direction: column-reverse;
+			
+			> * {
+				width: 100%;
+			}
+			
+			> div {
+				padding: 20px 14px 36px;
+			}
+			
+			h3 {
+				margin: 4px 0;
+				font-size: 24px;
+			}
+			
+			span {
+				margin-bottom: 18px;
+				font-size: 14px;
+			}
+		}
+	}
+	
+	.block-blog {
+		margin-top: 48px;
+		margin-bottom: 0;
+		
+		&__container {
+			margin: 0;
+		}
+		
+		.blog-item {
+			width: 100%;
+		}
+	}
+	
+	.blog-item {
+		margin: 0;
+		padding: 0;
+		box-shadow: none !important;
+		
+		&__body {
+			margin-top: 12px;
+			
+			h4 {
+				margin-bottom: 4px;
+			}
+		}
+		
+		&__type {
+			margin-bottom: 6px;
+		}
+		
+		& + .blog-item {
+			margin-top: 20px;
+		}
+		
+		.block-center {
+			margin-top: 24px;
+		}
+	}
+	
+	.block-insta {
+		margin-top: 48px;
+		padding-top: 40px;
+		padding-bottom: 72px;
+		
+		&__container {
+			margin: 0;
+		}
+		
+		&__item {
+			margin: 0;
+			padding-bottom: 100%;
+			width: 100%;
+			
+			&:not(:last-child) {
+				margin-bottom: 12px;
+			}
+		}
+		
+		h2 span {
+			text-decoration: underline;
+			
+			&:before, &:after {
+				display: none;
+			}
+		}
+	}
+}

@@ -79,7 +79,13 @@
 					<span>Пермский Сад</span>
 				</a>
 				<div class="navbar-group">
-					<div class="navbar-toggle-mobile">Каталог</div>
+					<div class="navbar-toggle-mobile">
+						<div class="icon-toggle">
+							<span></span>
+							<span></span>
+						</div>
+						<span>Каталог</span>
+					</div>
 					<div class="navbar-toggle">
 						<div class="icon-toggle">
 							<span></span>
@@ -109,6 +115,9 @@
 						<a href="#profile-enter" class="icon icon-person"  data-fancybox data-touch="false"></a>
 					</div>
 					<a href="favorite.html" class="icon icon-heart"></a>
+					<a href="order.html" class="navbar-user__cart-content mobile">
+						<div class="icon icon-cart"></div>
+					</a>
 					<div class="navbar-user__cart-content">
 						<div class="icon icon-cart"></div>
 						<div class="navbar-user__cart">
@@ -122,7 +131,7 @@
 							<div class="navbar-user__cart--body">
 								<div class="navbar-user__cart--body-wrap">
 									<div class="navbar-user__cart--item">
-										<div class="navbar-user__cart--image" style="background-image:url('assets/img/ficus.jpg');"></div>
+										<div class="navbar-user__cart--image" style="background-image: url('assets/img/ficus.jpg');"></div>
 										<div class="navbar-user__cart--info">
 											<a href="#">Фикус Даниэль</a>
 											<span>Размер: 50 см</span>
@@ -137,7 +146,7 @@
 										</div>
 									</div>
 									<div class="navbar-user__cart--item">
-										<div class="navbar-user__cart--image" style="background-image:url('assets/img/ficus.jpg');"></div>
+										<div class="navbar-user__cart--image" style="background-image: url('assets/img/ficus.jpg');"></div>
 										<div class="navbar-user__cart--info">
 											<a href="#">Фикус Даниэль</a>
 											<span>Размер: 50 см</span>
@@ -152,7 +161,7 @@
 										</div>
 									</div>
 									<div class="navbar-user__cart--item">
-										<div class="navbar-user__cart--image" style="background-image:url('assets/img/ficus.jpg');"></div>
+										<div class="navbar-user__cart--image" style="background-image: url('assets/img/ficus.jpg');"></div>
 										<div class="navbar-user__cart--info">
 											<a href="#">Фикус Даниэль</a>
 											<span>Размер: 50 см</span>
@@ -167,7 +176,7 @@
 										</div>
 									</div>
 									<div class="navbar-user__cart--item">
-										<div class="navbar-user__cart--image" style="background-image:url('assets/img/ficus.jpg');"></div>
+										<div class="navbar-user__cart--image" style="background-image: url('assets/img/ficus.jpg');"></div>
 										<div class="navbar-user__cart--info">
 											<a href="#">Фикус Даниэль</a>
 											<span>Размер: 50 см</span>
@@ -342,19 +351,27 @@
 		<div class="container">
 			<div class="block-advantages__container">
 				<div class="block-advantages__item">
-					<div class="icon icon-badge"></div>
+					<div class="icons">
+						<div class="icon icon-badge"></div>
+					</div>
 					<h4>Гарантия качества</h4>
 				</div>
 				<div class="block-advantages__item">
-					<div class="icon icon-badge"></div>
+					<div class="icons">
+						<div class="icon icon-local-shipping"></div>
+					</div>
 					<h4>Бережная доставка</h4>
 				</div>
 				<div class="block-advantages__item">
-					<div class="icon icon-badge"></div>
+					<div class="icons">
+						<div class="icon icon-conversation"></div>
+					</div>
 					<h4>Консультации по уходу</h4>
 				</div>
 				<div class="block-advantages__item">
-					<div class="icon icon-badge"></div>
+					<div class="icons">
+						<div class="icon icon-price-tag"></div>
+					</div>
 					<h4>Доступные цены</h4>
 				</div>
 			</div>
@@ -363,7 +380,7 @@
 	<section class="block-weeks">
 		<div class="container">
 			<h2>Товары недели</h2>
-			<div class="block-weeks__slider">
+			<div class="block-weeks__slider product-inner">
 				<div>
 					<div class="product-item">
 						<div class="product-item__wrap">
@@ -375,7 +392,7 @@
 									<span class="icon icon-favorite"></span>
 								</span>
 							</div>
-							<div class="product-item__image" style="background-image:url('assets/img/scindapus.jpg');"></div>
+							<div class="product-item__image" style="background-image: url('assets/img/scindapus.jpg');"></div>
 							<div class="product-item__body">
 								<div class="product-item__type">Комнатные цветы</div>
 								<a href="#" class="product-item__name">Сциндаптус</a>
@@ -405,7 +422,7 @@
 									<span class="icon icon-favorite active"></span>
 								</span>
 							</div>
-							<div class="product-item__image" style="background-image:url('assets/img/scindapus.jpg');"></div>
+							<div class="product-item__image" style="background-image: url('assets/img/scindapus.jpg');"></div>
 							<div class="product-item__body">
 								<div class="product-item__type">Комнатные цветы</div>
 								<a href="product.html" class="product-item__name">Алоэ Вера</a>
@@ -435,7 +452,7 @@
 								<span class="icon icon-favorite"></span>
 							</span>
 							</div>
-							<div class="product-item__image" style="background-image:url('assets/img/scindapus.jpg');"></div>
+							<div class="product-item__image" style="background-image: url('assets/img/scindapus.jpg');"></div>
 							<div class="product-item__body">
 								<div class="product-item__type">Комнатные цветы</div>
 								<a href="product.html" class="product-item__name">Пилея, d 12</a>
@@ -465,7 +482,7 @@
 								<span class="icon icon-favorite"></span>
 							</span>
 							</div>
-							<div class="product-item__image" style="background-image:url('assets/img/scindapus.jpg');"></div>
+							<div class="product-item__image" style="background-image: url('assets/img/scindapus.jpg');"></div>
 							<div class="product-item__body">
 								<div class="product-item__type">Саженцы</div>
 								<a href="product.html" class="product-item__name">Смородина Натали (красная), С2</a>
@@ -495,7 +512,7 @@
 								<span class="icon icon-favorite"></span>
 							</span>
 							</div>
-							<div class="product-item__image" style="background-image:url('assets/img/scindapus.jpg');"></div>
+							<div class="product-item__image" style="background-image: url('assets/img/scindapus.jpg');"></div>
 							<div class="product-item__body">
 								<div class="product-item__type">Комнатные цветы</div>
 								<a href="product.html" class="product-item__name">Сциндаптус</a>
@@ -559,7 +576,7 @@
 			<div class="block-blog__container">
 				<a href="#" class="blog-item">
 					<div class="blog-item__wrap">
-						<div class="blog-item__image" style="background-image:url('assets/img/blog-01.jpg');"></div>
+						<div class="blog-item__image" style="background-image: url('assets/img/blog-01.jpg');"></div>
 						<div class="blog-item__body">
 							<div class="blog-item__type">
 								<span>Новости</span>
@@ -572,7 +589,7 @@
 				</a>
 				<a href="#" class="blog-item">
 					<div class="blog-item__wrap">
-						<div class="blog-item__image" style="background-image:url('assets/img/blog-02.jpg');"></div>
+						<div class="blog-item__image" style="background-image: url('assets/img/blog-02.jpg');"></div>
 						<div class="blog-item__body">
 							<div class="blog-item__type">
 								<span>Статьи</span>
@@ -585,7 +602,7 @@
 				</a>
 				<a href="#" class="blog-item">
 					<div class="blog-item__wrap">
-						<div class="blog-item__image" style="background-image:url('assets/img/blog-03.jpg');"></div>
+						<div class="blog-item__image" style="background-image: url('assets/img/blog-03.jpg');"></div>
 						<div class="blog-item__body">
 							<div class="blog-item__type">
 								<span>Новости</span>
@@ -608,19 +625,19 @@
 				<h2>Пермский Сад в <span>Инстаграм</span></h2>
 			</div>
 			<div class="block-insta__container">
-				<a href="#" class="block-insta__item" style="background-image:url('assets/img/insta-01.jpg');">
+				<a href="#" class="block-insta__item" style="background-image: url('assets/img/insta-01.jpg');">
 					<span>
 						<span class="icon icon-instagram-outline"></span>
 						Перейти в Инстаграм
 					</span>
 				</a>
-				<a href="#" class="block-insta__item" style="background-image:url('assets/img/insta-02.jpg');">
+				<a href="#" class="block-insta__item" style="background-image: url('assets/img/insta-02.jpg');">
 					<span>
 						<span class="icon icon-instagram-outline"></span>
 						Перейти в Инстаграм
 					</span>
 				</a>
-				<a href="#" class="block-insta__item" style="background-image:url('assets/img/insta-03.jpg');">
+				<a href="#" class="block-insta__item" style="background-image: url('assets/img/insta-03.jpg');">
 					<span>
 						<span class="icon icon-instagram-outline"></span>
 						Перейти в Инстаграм

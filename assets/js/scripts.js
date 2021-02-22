@@ -12,7 +12,7 @@ $(window).scroll(function(){
 ////// ---scroll header--- //////
 
 ////// navbar toggle //////
-let navbarToggle = document.querySelector('.navbar-toggle');
+/*let navbarToggle = document.querySelector('.navbar-toggle');
 let navbarToggleIcon = document.querySelector('.icon-toggle');
 let navbarMenu = document.querySelector('.navbar-menu');
 navbarToggle.addEventListener('click', function () {
@@ -24,6 +24,18 @@ document.addEventListener('click', function (e) {
 		navbarToggleIcon.classList.remove('active');
 		navbarMenu.classList.remove('active');
 	}
+})*/
+$('.navbar-toggle').on('click', function (e) {
+	$('.navbar-toggle .icon-toggle').toggleClass('active');
+	$('.navbar-menu').slideToggle();
+	e.stopPropagation();
+})
+$('.navbar-menu__container').on('click', function (e) {
+	e.stopPropagation();
+})
+$(document).on('click', function () {
+	$('.navbar-toggle .icon-toggle').removeClass('active');
+	$('.navbar-menu').slideUp();
 })
 ////// ---navbar toggle--- //////
 
@@ -53,7 +65,7 @@ let navbarMobileToggle = document.querySelector('.navbar-toggle-mobile');
 let navbarMobile = document.querySelector('.navbar-mobile');
 if (navbarMobileToggle) {
 	navbarMobileToggle.addEventListener('click', function () {
-		this.classList.toggle('active');
+		document.querySelector('.navbar-toggle-mobile .icon-toggle').classList.toggle('active');
 		navbarMobile.classList.toggle('active');
 		document.body.classList.toggle('overflow-h');
 	})
@@ -183,18 +195,11 @@ $('.main-slider__slider').slick({
 	slidesToScroll: 1,
 	responsive: [
 		{
-			breakpoint: 999,
+			breakpoint: 1040,
 			settings: {
-				slidesToShow: 4,
-			}
-		},
-		{
-			breakpoint: 767,
-			settings: {
-				slidesToShow: 1,
 				arrows: false
 			}
-		},
+		}
 	]
 });
 ////// ---main slider--- //////
@@ -211,6 +216,15 @@ $('.block-weeks__slider').slick({
 			breakpoint: 1299,
 			settings: {
 				arrows: false,
+				dots: true,
+			}
+		},
+		{
+			breakpoint: 999,
+			settings: {
+				slidesToShow: 3,
+				arrows: false,
+				dots: true,
 			}
 		},
 		{
@@ -378,6 +392,8 @@ $('.product-slider .product-slider--for').slick({
 	arrows: true,
 	dots: false,
 	fade: true,
+	swipeToSlide: false,
+	swipe: false,
 	responsive: [
 		{
 			breakpoint: 999,
@@ -403,6 +419,14 @@ $('.product-slider .product-slider--nav').slick({
 	responsive: [
 		{
 			breakpoint: 999,
+			settings: {
+				slidesToShow: 5,
+				//variableWidth: true,
+				swipeToSlide: true,
+			}
+		},
+		{
+			breakpoint: 700,
 			settings: {
 				slidesToShow: 4,
 				variableWidth: true,
@@ -465,13 +489,12 @@ $('.about-slider .about-slider--for').slick({
 			breakpoint: 999,
 			settings: {
 				arrows: false,
-				dots: true,
 			}
 		},
 	]
 });
 $('.about-slider .about-slider--nav').slick({
-	slidesToShow: 6,
+	slidesToShow: 9,
 	slidesToScroll: 1,
 	asNavFor: '.about-slider--for',
 	infinite: false,
@@ -486,7 +509,7 @@ $('.about-slider .about-slider--nav').slick({
 		{
 			breakpoint: 999,
 			settings: {
-				variableWidth: true,
+				//variableWidth: true,
 				swipeToSlide: true
 			}
 		},
@@ -507,6 +530,18 @@ if (orderPromoLabel) {
 	})
 }
 ////// ---order promo--- //////
+
+////// order button //////
+let heightOrder = $('.header').height() + $('.order').height();
+$(window).scroll(function () {
+	if ($(window).scrollTop() > heightOrder - 300) {
+		$('.total-amount__button').css('bottom', '-60px');
+	} else {
+		$('.total-amount__button').removeAttr("style");
+	}
+});
+
+////// ---order button--- //////
 
 ////// radio-tabs //////
 $('.checkout-step__radio a').on('click', function (e) {

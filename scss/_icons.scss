@@ -6,11 +6,11 @@
 }
 
 .icon {
-	-webkit-mask-position: center;
-	-webkit-mask-repeat: no-repeat;
-	-webkit-mask-size: contain;
-	background-color: var(--color-green);
 	flex-shrink: 0;
+	background-color: var(--color-green);
+	-webkit-mask-position: center;
+	-webkit-mask-size: contain;
+	-webkit-mask-repeat: no-repeat;
 }
 
 .icon-point {
@@ -180,6 +180,18 @@
 	-webkit-mask-image: url('/assets/img/icon/icon-delete.svg');
 }
 
+.icon-badge {
+	-webkit-mask-image: url('/assets/img/icon/icon-badge.svg');
+}
+
+.icon-price-tag {
+	-webkit-mask-image: url('/assets/img/icon/icon-price-tag.svg');
+}
+
+.icon-conversation {
+	-webkit-mask-image: url('/assets/img/icon/icon-conversation.svg');
+}
+
 .icon-local-shipping {
 	-webkit-mask-image: url('/assets/img/icon/icon-local-shipping.svg');
 }
@@ -191,3 +203,4 @@
 .icon-filter {
 	-webkit-mask-image: url('/assets/img/icon/icon-filter.svg');
 }
+

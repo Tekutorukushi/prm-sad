@@ -383,9 +383,18 @@
 						<h4>Фильтры</h4>
 						<div class="aside-menu__wrap">
 							<div class="aside-menu__item">
-								<div id="steps-slider"></div>
-								<input type="text" id="input-with-keypress-1">
-								<input type="text" id="input-with-keypress-0">
+								<div class="range-slider">
+									<span>Цена</span>
+									<div class="range-slider__numbers">
+										<div>
+											<input type="number" id="input-with-keypress-0">
+										</div>
+										<div>
+											<input type="number" id="input-with-keypress-1">
+										</div>
+									</div>
+									<div class="range-slider__slider" id="steps-slider"></div>
+								</div>
 							</div>
 							<div class="aside-menu__item">
 								<div class="filter-check">
@@ -409,6 +418,12 @@
 				</div>
 				<div class="catalog-content">
 					<div class="catalog-filter">
+						<a href="#filter" id="filter-mobile" class="catalog-filter__button" data-fancybox data-touch="false">
+<!--							catalog-filter__button active-->
+<!--							добавить класс active когда выбран фильтр-->
+							<div class="icon icon-filter"></div>
+							<span>Фильтры</span>
+						</a>
 						<div class="catalog-filter__filter">
 							<span>Сортировать:</span>
 							<select class="custom-select">
@@ -417,9 +432,6 @@
 								<option>Сначала дорогие</option>
 								<option>По размеру скидки</option>
 							</select>
-						</div>
-						<div class="catalog-filter__button active">
-							<a href="#filter" class="icon icon-filter" data-fancybox data-touch="false"></a>
 						</div>
 					</div>
 					<div class="catalog-list">
@@ -608,16 +620,13 @@
 						<span>Цена</span>
 						<div class="range-slider__numbers">
 							<div>
-								<input type="number" value="10" min="0" max="50">
+								<input type="number" id="input-with-keypress-0">
 							</div>
 							<div>
-								<input type="number" value="30" min="0" max="50">
+								<input type="number" id="input-with-keypress-1">
 							</div>
 						</div>
-						<div class="range-slider__slider">
-							<input class="range-input" value="10" min="1" max="50" step="1" type="range">
-							<input class="range-input" value="30" min="1" max="50" step="1" type="range">
-						</div>
+						<div class="range-slider__slider" id="steps-slider"></div>
 					</div>
 				</div>
 				<div class="aside-menu__item">
@@ -648,9 +657,10 @@
 	<script src="assets/js/slick.min.js"></script>
 	<script src="assets/js/jquery.fancybox.min.js"></script>
 	<script src="assets/js/nouislider.min.js"></script>
+	<script src="assets/js/wNumb.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 	<script>
-	  $('.icon-filter').fancybox({
+	  $('#filter-mobile').fancybox({
 		baseClass: "modal-filter-container",
 		animationEffect: 'slide',
 		slideClass: "slide-in",
@@ -662,21 +672,20 @@
 	});
 	</script>
 	<script>
-	  var stepsSlider = document.getElementById('steps-slider');
-	  var input0 = document.getElementById('input-with-keypress-0');
-	  var input1 = document.getElementById('input-with-keypress-1');
-	  var inputs = [input0, input1];
+	  let stepsSlider = document.getElementById('steps-slider');
+	  let input0 = document.getElementById('input-with-keypress-0');
+	  let input1 = document.getElementById('input-with-keypress-1');
+	  let inputs = [input0, input1];
 
 	  noUiSlider.create(stepsSlider, {
-		  start: [20, 80],
+		  start: [100, 1000],
 		  connect: true,
-		  tooltips: [true, wNumb({decimals: 1})],
+			format: wNumb({
+				decimals: 0
+			}),
 		  range: {
 			  'min': [0],
-			  '10%': [10, 10],
-			  '50%': [80, 50],
-			  '80%': 150,
-			  'max': 200
+			  'max': 2000
 		  }
 	  });
 

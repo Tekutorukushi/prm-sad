@@ -67,7 +67,7 @@
 	}
 	
 	&__map {
-	
+		min-width: 300px;
 	}
 	
 	h2 {
@@ -75,12 +75,31 @@
 	}
 }
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
 
 	.contacts {
+		
+		&__container {
+			flex-direction: column;
+		}
 
 		&__map {
 			margin-top: 20px;
+			width: 100%;
+			
+			> * {
+				width: 100% !important;
+				height: 415px !important;
+			}
+		}
+	}
+}
+
+@media (max-width: 700px) {
+	
+	.contacts {
+		
+		&__map {
 			
 			> * {
 				width: 100% !important;

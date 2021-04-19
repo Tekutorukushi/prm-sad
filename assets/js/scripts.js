@@ -12,23 +12,11 @@ $(window).scroll(function(){
 ////// ---scroll header--- //////
 
 ////// navbar toggle //////
-/*let navbarToggle = document.querySelector('.navbar-toggle');
-let navbarToggleIcon = document.querySelector('.icon-toggle');
-let navbarMenu = document.querySelector('.navbar-menu');
-navbarToggle.addEventListener('click', function () {
-	navbarToggleIcon.classList.toggle('active');
-	navbarMenu.classList.toggle('active');
-})
-document.addEventListener('click', function (e) {
-	if ( e.target === navbarMenu && e.target !== navbarToggle ) {
-		navbarToggleIcon.classList.remove('active');
-		navbarMenu.classList.remove('active');
-	}
-})*/
 $('.navbar-toggle').on('click', function (e) {
+	e.stopPropagation();
 	$('.navbar-toggle .icon-toggle').toggleClass('active');
 	$('.navbar-menu').slideToggle();
-	e.stopPropagation();
+	$('.custom-select__wrap').find('.active').removeClass('active');
 })
 $('.navbar-menu__container').on('click', function (e) {
 	e.stopPropagation();
@@ -100,6 +88,8 @@ $('.custom-select').each(function() {
 
 	$styledSelect.click(function(e) {
 		e.stopPropagation();
+		$('.navbar-toggle').find('.active').removeClass('active');
+		$('.navbar-menu').slideUp();
 		$('div.custom-select.active').not(this).each(function(){
 			$(this).removeClass('active').next('.custom-select__options').removeClass('active');
 		});
@@ -189,7 +179,8 @@ cartPlus.forEach(function (item) {
 ////// main slider //////
 $('.main-slider__slider').slick({
 	dots: true,
-	infinite: false,
+	infinite: true,
+	autoplay: true,
 	speed: 1000,
 	slidesToShow: 1,
 	slidesToScroll: 1,
@@ -410,7 +401,7 @@ $('.product-slider .product-slider--nav').slick({
 	asNavFor: '.product-slider--for',
 	infinite: false,
 	dots: false,
-	arrows: false,
+	arrows: true,
 	focusOnSelect: true,
 	swipeToSlide: true,
 	//variableWidth: true,

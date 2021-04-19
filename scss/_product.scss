@@ -282,6 +282,24 @@
 					opacity: 1;
 				}
 			}
+			
+			.slick-arrow {
+				width: 36px;
+				height: 36px;
+				
+				&:before {
+					width: 8px;
+					height: 14px;
+				}
+			}
+
+			.slick-prev {
+				left: 0;
+			}
+
+			.slick-next {
+				right: 0;
+			}
 		}
 	}
 }

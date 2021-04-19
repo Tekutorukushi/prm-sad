@@ -165,6 +165,10 @@ input[type=number] {
 	color: var(--color-green);
 }
 
+.color-grey {
+	color: #BDBDBD;
+}
+
 .favorite-btn {
 
 	&:hover .icon{
@@ -926,6 +930,7 @@ input[type=number] {
 		
 		label {
 			display: block;
+			font-size: 14px;
 			text-decoration: none;
 			color: var(--color-black);
 			cursor: pointer;
@@ -1250,6 +1255,10 @@ input[type=number] {
 		padding: 12px 16px;
 		font-size: 16px;
 		color: var(--color-black);
+		
+		&:not(:last-child) {
+			border-bottom: 1px solid #f2f2f0;
+		}
 		
 		&:hover {
 			color: var(--color-green);

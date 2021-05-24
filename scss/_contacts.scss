@@ -4,7 +4,6 @@
 	
 	&__container {
 		display: flex;
-		flex-wrap: wrap;
 	}
 	
 	&__content {
@@ -67,7 +66,15 @@
 	}
 	
 	&__map {
+		width: 100%;
 		min-width: 300px;
+		max-width: 634px;
+		min-height: 300px;
+		
+		& > * {
+			width: 100% !important;
+			height: 100% !important;
+		}
 	}
 	
 	h2 {
@@ -75,7 +82,7 @@
 	}
 }
 
-@media (max-width: 900px) {
+@media (max-width: 999px) {
 
 	.contacts {
 		

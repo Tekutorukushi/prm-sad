@@ -5,13 +5,12 @@
 		flex-direction: column;
 		
 		&__header {
-			margin-bottom: 24px;
 			display: flex;
 			align-items: flex-start;
 			
 			span {
 				margin-left: auto;
-				display: block;
+				display: none;
 				line-height: 28px;
 				font-weight: 500;
 				color: var(--color-green);
@@ -20,6 +19,10 @@
 				
 				&:hover {
 					color: var(--color-dark-green);
+				}
+				
+				&.active {
+					display: block;
 				}
 			}
 		}
@@ -33,11 +36,6 @@
 		&__radio {
 			margin-bottom: 16px;
 			display: flex;
-			flex-wrap: wrap;
-			
-			&--container {
-			
-			}
 			
 			&--item {
 				display: none;
@@ -65,6 +63,23 @@
 			
 			p {
 				margin: 0;
+			}
+		}
+		
+		&__wrap {
+			margin-top: 24px;
+			display: none;
+			flex-direction: column;
+		}
+		
+		.order-alert {
+			justify-content: flex-start;
+		}
+		
+		&.active {
+			
+			.checkout-step__wrap {
+				display: flex;
 			}
 		}
 		
@@ -140,7 +155,12 @@
 	}
 	
 	&-next {
-		margin-top: 24px;
+		width: 100%;
+		
+		&__wrap {
+			margin-top: 24px;
+			max-width: 445px;
+		}
 	}
 }
 
@@ -160,28 +180,38 @@
 
 .step-filling {
 	display: none;
-
-	&.active {
-		display: block;
-	}
+	flex-direction: column;
 }
 
 .step-filled {
+	margin-top: 8px;
+	margin-left: 38px;
 	display: none;
-
+	flex-direction: column;
+	font-size: 16px;
+	color: #bdbdbd;
+	
 	&.active {
-		display: block;
+		display: flex;
+	}
+	
+	p {
+		margin: 0;
 	}
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
 
 	.checkout {
 
 		&-step {
 
-			&__radio .radio + .radio{
-				margin: 16px 0 0;
+			&__radio {
+				flex-direction: column;
+				
+				.radio + .radio{
+					margin: 16px 0 0!important;
+				}
 			}
 		}
 
@@ -210,14 +240,17 @@
 		}
 		
 		&-next {
-			position: fixed;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			z-index: 20;
-			padding: 6px 16px;
-			display: none;
-			background: #ffffff;
+			
+			&__wrap {
+				position: fixed;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: 20;
+				padding: 6px 16px;
+				display: flex;
+				background: #ffffff;
+			}
 			
 			&.active {
 				display: block;

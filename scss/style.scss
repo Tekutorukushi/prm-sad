@@ -232,3 +232,64 @@ body {
 		}
 	}
 }
+
+.cookie-tip {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 24px;
+	z-index: 3;
+	transition: all .2s ease-in-out;
+	
+	&_hidden {
+		transform: translateY(150%);
+	}
+	
+	&__content {
+		padding: 10px;
+		display: flex;
+		justify-content: center;
+		color: #ffffff;
+		background: #008d4f;
+		border-radius: 4px;
+		box-shadow: 0 0 25px rgba(0, 0, 0, .15);
+		
+		p {
+			margin: 0 15px 0 0;
+		}
+		
+		a {
+			font-weight: 500;
+			text-decoration: underline;
+			color: #ffffff;
+		}
+	}
+	
+	&__wrap {
+		width: 100%;
+		max-width: 804px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	.btn-secondary {
+		font-weight: 400;
+		color: #008d4f;
+		background-color: #ffffff !important;
+		border-color: #ffffff !important;
+		
+		&:hover {
+			color: var(--color-dark-green) !important;
+		}
+	}
+}
+
+.page-container {
+	width: 100%;
+	max-width: 825px;
+	
+	h2 {
+		margin-bottom: 20px;
+	}
+}

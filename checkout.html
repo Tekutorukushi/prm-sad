@@ -323,38 +323,38 @@
 			</div>
 			<div class="order__container">
 				<div class="order__content">
-					<div class="checkout-step">
+					<div class="checkout-step active" id="checkout-step-1">
 						<div class="checkout-step__header">
 							<div class="step-num">1</div>
 							<h4>Доставка</h4>
 							<span>Изменить</span>
 						</div>
-						<div class="checkout-step__radio">
-							<a href="#tab-currier" class="radio">
-								<input id="currier" name="step-delivery" type="radio" checked>
-								<div class="radio-container">
-									<div class="radio-icon"></div>
-									<label for="currier">Доставка курьером</label>
-								</div>
-							</a>
-							<a href="#tab-pickup" class="radio">
-								<input id="pickup" name="step-delivery" type="radio">
-								<div class="radio-container">
-									<div class="radio-icon"></div>
-									<label for="pickup">Самовывоз</label>
-								</div>
-							</a>
-						</div>
-						<div class="checkout-step__content">
-							<div class="step-filling active">
-								<div class="checkout-step__radio--container">
-									<div class="checkout-step__radio--item active" id="tab-currier">
-										<div class="order-alert">
-											<div class="order-alert__item">
-												<div class="icon icon-local-shipping"></div>
-												<span>Ближайшая доставка 17 декабря, от 200 руб.</span>
-											</div>
+						<div class="checkout-step__wrap">
+							<div class="checkout-step__radio">
+								<a href="#tab-currier" class="radio">
+									<input id="currier" name="step-delivery" type="radio" checked>
+									<div class="radio-container">
+										<div class="radio-icon"></div>
+										<label for="currier">Доставка курьером</label>
+									</div>
+								</a>
+								<a href="#tab-pickup" class="radio">
+									<input id="pickup" name="step-delivery" type="radio">
+									<div class="radio-container">
+										<div class="radio-icon"></div>
+										<label for="pickup">Самовывоз</label>
+									</div>
+								</a>
+							</div>
+							<div class="checkout-step__radio--container">
+								<div class="checkout-step__radio--item active" id="tab-currier">
+									<div class="order-alert">
+										<div class="order-alert__item">
+											<div class="icon icon-local-shipping"></div>
+											<span>Ближайшая доставка 17 декабря, от 200 руб.</span>
 										</div>
+									</div>
+									<div class="checkout-step__content">
 										<div class="checkout-group">
 											<span>Адрес доставки</span>
 											<div class="checkout-group__input">
@@ -397,18 +397,17 @@
 													</select>
 												</div>
 											</div>
-											<div class="checkout-next active" id="next-1">
-												<div class="btn-primary btn-small">Продолжить</div>
-											</div>
 										</div>
 									</div>
-									<div class="checkout-step__radio--item" id="tab-pickup">
-										<div class="order-alert">
-											<div class="order-alert__item">
-												<div class="icon icon-local-shipping"></div>
-												<span>Товар можно будет забрать сразу после подтверждения заказа менеджером.</span>
-											</div>
+								</div>
+								<div class="checkout-step__radio--item" id="tab-pickup">
+									<div class="order-alert">
+										<div class="order-alert__item">
+											<div class="icon icon-local-shipping"></div>
+											<span>Товар можно будет забрать сразу после подтверждения заказа менеджером.</span>
 										</div>
+									</div>
+									<div class="checkout-step__content">
 										<div class="checkout-step__address">
 											<b>Адрес пункта самовывоза</b>
 											<p>Пермский район, д. Ванюки, ул. Зеленая 43</p>
@@ -418,33 +417,40 @@
 									</div>
 								</div>
 							</div>
-							<div class="step-filled"></div>
+							<div class="checkout-next__wrap">
+								<div class="btn-primary btn-small checkout-next">Продолжить</div>
+							</div>
+						</div>
+						<div class="step-filled">
+							<p>Курьером по адресу ул. Ленина, дом 5, подъезд 1, 7 этаж, кв. 146</p>
+							<p>Стоимость доставки от 200 руб.</p>
+							<p>Время доставки 17 декабря 9:00 - 10:00</p>
 						</div>
 					</div>
-					<div class="checkout-step">
+					<div class="checkout-step" id="checkout-step-2">
 						<div class="checkout-step__header">
 							<div class="step-num">2</div>
 							<h4>Оплата</h4>
 							<span>Изменить</span>
 						</div>
-						<div class="checkout-step__radio">
-							<a href="#tab-card-online" class="radio">
-								<input id="card-online" name="step-pay" type="radio" checked>
-								<div class="radio-container">
-									<div class="radio-icon"></div>
-									<label for="currier">Картой или переводом онлайн</label>
-								</div>
-							</a>
-							<a href="#tab-card-in" class="radio">
-								<input id="card-in" name="step-pay" type="radio">
-								<div class="radio-container">
-									<div class="radio-icon"></div>
-									<label for="card-in">Картой, переводом или наличными при получении</label>
-								</div>
-							</a>
-						</div>
-						<div class="checkout-step__content">
-							<div class="step-filling active">
+						<div class="checkout-step__wrap">
+							<div class="checkout-step__radio">
+								<a href="#tab-card-online" class="radio">
+									<input id="card-online" name="step-pay" type="radio" checked>
+									<div class="radio-container">
+										<div class="radio-icon"></div>
+										<label for="currier">Картой или переводом онлайн</label>
+									</div>
+								</a>
+								<a href="#tab-card-in" class="radio">
+									<input id="card-in" name="step-pay" type="radio">
+									<div class="radio-container">
+										<div class="radio-icon"></div>
+										<label for="card-in">Картой, переводом или наличными при получении</label>
+									</div>
+								</a>
+							</div>
+							<div class="checkout-step__content">
 								<div class="checkout-step__radio--container">
 									<div class="checkout-step__radio--item active" id="tab-card-online">
 										<div class="checkout-group">
@@ -457,27 +463,31 @@
 										</div>
 									</div>
 								</div>
-								<div class="checkout-next" id="next-2">
-									<div class="btn-primary btn-small">Продолжить</div>
-								</div>
 							</div>
-							<div class="step-filled"></div>
+							<div class="checkout-next__wrap">
+								<div class="btn-primary btn-small checkout-next">Продолжить</div>
+							</div>
+						</div>
+						<div class="step-filled">
+							<p>Картой или переводом онлайн</p>
 						</div>
 					</div>
-					<div class="checkout-step">
+					<div class="checkout-step" id="checkout-step-3">
 						<div class="checkout-step__header">
 							<div class="step-num">3</div>
 							<h4>Контактные данные получателя</h4>
 						</div>
-						<div class="checkout-step__content">
-							<div class="input">
-								<input type="text" placeholder="Введите ваше имя">
+						<div class="checkout-step__wrap">
+							<div class="checkout-step__content">
+								<div class="input">
+									<input type="text" placeholder="Введите ваше имя">
+								</div>
+								<div class="input">
+									<input placeholder="Введите ваш номер телефона">
+								</div>
 							</div>
-							<div class="input">
-								<input placeholder="Введите ваш номер телефона">
-							</div>
-							<div class="checkout-next" id="next-3">
-								<div class="btn-primary btn-small">Оформить заказ</div>
+							<div class="checkout-next__wrap">
+								<div class="btn-primary btn-small checkout-next">Оформить заказ</div>
 							</div>
 						</div>
 					</div>

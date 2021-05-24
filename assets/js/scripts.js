@@ -374,64 +374,6 @@ if (productShare) {
 }
 ////// ---product share--- //////
 
-////// product slider //////
-$('.product-slider .product-slider--for').slick({
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	asNavFor: '.product-slider--nav',
-	infinite: false,
-	arrows: true,
-	dots: false,
-	fade: true,
-	swipeToSlide: false,
-	swipe: false,
-	responsive: [
-		{
-			breakpoint: 999,
-			settings: {
-				arrows: false,
-				dots: false,
-			}
-		},
-	]
-});
-$('.product-slider .product-slider--nav').slick({
-	slidesToShow: 6,
-	slidesToScroll: 1,
-	asNavFor: '.product-slider--for',
-	infinite: false,
-	dots: false,
-	arrows: true,
-	focusOnSelect: true,
-	swipeToSlide: true,
-	//variableWidth: true,
-	//centerMode: true,
-	//centerPadding: false,
-	responsive: [
-		{
-			breakpoint: 999,
-			settings: {
-				slidesToShow: 5,
-				//variableWidth: true,
-				swipeToSlide: true,
-			}
-		},
-		{
-			breakpoint: 700,
-			settings: {
-				slidesToShow: 4,
-				variableWidth: true,
-				swipeToSlide: true
-			}
-		},
-	]
-});
-$('.product-slider .product-slider--nav .slick-slide').on('click', function () {
-	$('.product-slider .product-slider--for').slick('slickGoTo', $(this).data('slickIndex'));
-});
-
-////// ---product slider--- //////
-
 ////// set rating //////
 let $setRating = $('#stars li');
 $setRating.on('mouseover', function(){
@@ -467,48 +409,68 @@ $setRating.on('click', function(){
 ////// ---set rating--- //////
 
 ////// product slider //////
-$('.about-slider .about-slider--for').slick({
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	asNavFor: '.about-slider--nav',
-	infinite: false,
-	arrows: true,
-	dots: false,
-	fade: true,
-	responsive: [
-		{
-			breakpoint: 999,
-			settings: {
-				arrows: false,
-			}
+/*const aboutSliderNav = new Swiper('.about-slider__nav', {
+	spaceBetween: 10,
+	slidesPerView: 4,
+	freeMode: true,
+	watchSlidesVisibility: true,
+	watchSlidesProgress: true,
+});
+const aboutSliderFor = new Swiper('.about-slider__for', {
+	navigation: {
+		nextEl: '.slick-next.slick-arrow',
+		prevEl: '.slick-prev.slick-arrow',
+	},
+	thumbs: {
+		swiper: aboutSliderNav
+	}
+});*/
+
+document.querySelectorAll('.product-slider').forEach(n => {
+	const productSliderNav = new Swiper(n.querySelector('.product-slider--nav'), {
+		spaceBetween: 10,
+		slidesPerView: 6,
+		freeMode: true,
+		breakpoints: {
+			300: {
+				slidesPerView: 4,
+			},
+			900: {
+				slidesPerView: 6,
+			},
 		},
-	]
-});
-$('.about-slider .about-slider--nav').slick({
-	slidesToShow: 9,
-	slidesToScroll: 1,
-	asNavFor: '.about-slider--for',
-	infinite: false,
-	dots: false,
-	arrows: false,
-	focusOnSelect: true,
-	swipeToSlide: true,
-	//variableWidth: true,
-	//centerMode: true,
-	//centerPadding: false,
-	responsive: [
-		{
-			breakpoint: 999,
-			settings: {
-				//variableWidth: true,
-				swipeToSlide: true
-			}
+	});
+
+	const productSliderFor = new Swiper(n.querySelector('.product-slider--for'), {
+		navigation: {
+			nextEl: n.querySelector('.slick-next.slick-arrow'),
+			prevEl: n.querySelector('.slick-prev.slick-arrow'),
 		},
-	]
+		thumbs: {
+			swiper: productSliderNav
+		}
+	});
+})
+
+
+var summSlide=0;
+$('.swiper-wrapper_center .swiper-slide').each(function(){
+	summSlide += 1*$(this).width();
 });
-$('.about-slider .about-slider--nav .slick-slide').on('click', function (event) {
-	$('.about-slider .about-slider--for').slick('slickGoTo', $(this).data('slickIndex'));
-});
+
+$('.swiper-wrapper_center').each(function () {
+	let summSlide = 0;
+	$(this).find('.swiper-slide').each(function(){
+		summSlide += 1*$(this).width();
+	});
+	if ( $(this).width() > summSlide + 40  ) {
+		$(this).css('justifyContent', 'center')
+	} else {
+		$(this).css('justifyContent', '')
+	}
+})
+
+
 ////// ---product slider--- //////
 
 ////// order promo //////
@@ -603,3 +565,39 @@ function openTabContent(el) {
 	target.parentElement.classList.add("active");
 }
 ////// ---tabs--- //////
+
+$('#checkout-step-1 .checkout-next').on('click', function () {
+	$(this).parent().parent().parent().removeClass('active');
+	$(this).parent().parent().parent().find('.checkout-step__header span').addClass('active');
+	$(this).parent().parent().parent().find('.step-filled').addClass('active');
+	$('#checkout-step-2').addClass('active');
+})
+
+$('#checkout-step-2 .checkout-next').on('click', function () {
+	$(this).parent().parent().parent().removeClass('active');
+	$(this).parent().parent().parent().find('.checkout-step__header span').addClass('active');
+	$(this).parent().parent().parent().find('.step-filled').addClass('active');
+	$('#checkout-step-3').addClass('active')
+})
+
+$('#checkout-step-1 .checkout-step__header span').on('click', function () {
+	$(this).removeClass('active');
+	$(this).parent().parent().addClass('active');
+	$('#checkout-step-1 .step-filled').removeClass('active');
+	$('#checkout-step-2').removeClass('active');
+	$('#checkout-step-2 .checkout-step__header span').removeClass('active');
+	$('#checkout-step-2 .step-filled').removeClass('active');
+	$('#checkout-step-3').removeClass('active');
+})
+
+$('#checkout-step-2 .checkout-step__header span').on('click', function () {
+	$(this).removeClass('active');
+	$(this).parent().parent().addClass('active');
+	$('#checkout-step-2 .step-filled').removeClass('active');
+	$('#checkout-step-3').removeClass('active');
+})
+
+$('.cookie-tip .btn-secondary').on('click', function () {
+	$('.cookie-tip').addClass('cookie-tip_hidden');
+	console.log('xx')
+})

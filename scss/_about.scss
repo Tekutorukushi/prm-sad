@@ -39,6 +39,18 @@
 	&-slider {
 		margin: 28px 0;
 		
+		&__wrap {
+			position: relative;
+			
+			.slick-arrow {
+				opacity: 0;
+			}
+			
+			&:hover .slick-arrow {
+				opacity: 1;
+			}
+		}
+		
 		&__image {
 			position: relative;
 			padding-bottom: 60%;
@@ -60,24 +72,18 @@
 			}
 		}
 		
-		.slick-track {
-			display: flex;
-		}
-		
-		&--for {
+		&__for {
 			margin: 0;
 		}
 		
-		&--nav {
+		&__nav {
 			margin-top: 12px;
 			
-			.slick-track {
-				margin: 0 auto;
+			.swiper-wrapper.swiper-wrapper_center {
 				justify-content: center;
 			}
 			
-			.slick-slide {
-				margin: 0 5px;
+			.swiper-slide {
 				min-width: 74px;
 				max-width: 74px;
 				height: 74px;
@@ -89,7 +95,7 @@
 					opacity: .6;
 				}
 				
-				&.slick-current {
+				&-thumb-active {
 					opacity: 1;
 				}
 			}

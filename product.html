@@ -17,6 +17,7 @@
 	<meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="assets/css/slick.css">
+	<link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -335,48 +336,54 @@
 			<div class="product">
 				<div class="product-head">
 					<div class="product-slider">
-						<div class="product-slider--for">
-							<div>
-								<div class="product-slider__image">
-									<a href="assets/img/product.jpg" data-fancybox="product-slider">
-										<img src="assets/img/product.jpg" alt="" />
-									</a>
+						<div class="swiper-container product-slider--for">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="product-slider__image">
+										<a href="assets/img/product.jpg" data-fancybox="product-slider">
+											<img src="assets/img/product.jpg" alt="" />
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="product-slider__image">
+										<a href="assets/img/pilea.jpg" data-fancybox="product-slider">
+											<img src="assets/img/pilea.jpg" alt="" />
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="product-slider__image">
+										<a href="assets/img/aloe.jpg" data-fancybox="product-slider">
+											<img src="assets/img/aloe.jpg" alt="" />
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="product-slider__image">
+										<a href="assets/img/aloe.jpg" data-fancybox="product-slider">
+											<img src="assets/img/aloe.jpg" alt="" />
+										</a>
+									</div>
 								</div>
 							</div>
-							<div>
-								<div class="product-slider__image">
-									<a href="assets/img/pilea.jpg" data-fancybox="product-slider">
-										<img src="assets/img/pilea.jpg" alt="" />
-									</a>
-								</div>
-							</div>
-							<div>
-								<div class="product-slider__image">
-									<a href="assets/img/aloe.jpg" data-fancybox="product-slider">
-										<img src="assets/img/aloe.jpg" alt="" />
-									</a>
-								</div>
-							</div>
-							<div>
-								<div class="product-slider__image">
-									<a href="assets/img/aloe.jpg" data-fancybox="product-slider">
-										<img src="assets/img/aloe.jpg" alt="" />
-									</a>
-								</div>
-							</div>
+							<div class="slick-next slick-arrow"></div>
+							<div class="slick-prev slick-arrow"></div>
 						</div>
-						<div class="product-slider--nav">
-							<div>
-								<img src="assets/img/product.jpg" alt="">
-							</div>
-							<div>
-								<img src="assets/img/pilea.jpg" alt="">
-							</div>
-							<div>
-								<img src="assets/img/aloe.jpg" alt="">
-							</div>
-							<div>
-								<img src="assets/img/aloe.jpg" alt="">
+						<div class="swiper-container product-slider--nav">
+							<div class="swiper-wrapper swiper-wrapper_center">
+								<div class="swiper-slide">
+									<img src="assets/img/product.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="assets/img/pilea.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="assets/img/aloe.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="assets/img/aloe.jpg" alt="">
+								</div>
 							</div>
 						</div>
 					</div>
@@ -541,6 +548,58 @@
 	<section class="recommend-goods">
 		<div class="container">
 			<hr>
+			<div class="product-slider">
+				<div class="swiper-container product-slider--for">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="product-slider__image">
+								<a href="assets/img/product.jpg" data-fancybox="product-slider">
+									<img src="assets/img/product.jpg" alt="" />
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="product-slider__image">
+								<a href="assets/img/pilea.jpg" data-fancybox="product-slider">
+									<img src="assets/img/pilea.jpg" alt="" />
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="product-slider__image">
+								<a href="assets/img/aloe.jpg" data-fancybox="product-slider">
+									<img src="assets/img/aloe.jpg" alt="" />
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="product-slider__image">
+								<a href="assets/img/aloe.jpg" data-fancybox="product-slider">
+									<img src="assets/img/aloe.jpg" alt="" />
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="slick-next slick-arrow"></div>
+					<div class="slick-prev slick-arrow"></div>
+				</div>
+				<div class="swiper-container product-slider--nav">
+					<div class="swiper-wrapper swiper-wrapper_center">
+						<div class="swiper-slide">
+							<img src="assets/img/product.jpg" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="assets/img/pilea.jpg" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="assets/img/aloe.jpg" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="assets/img/aloe.jpg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
 			<h4>Вам также может понравиться</h4>
 			<div class="recommend-goods__container">
 				<div class="product-item">
@@ -814,6 +873,7 @@
 	<script src="assets/js/jquery-3.5.1.min.js"></script>
 	<script src="assets/js/slick.min.js"></script>
 	<script src="assets/js/jquery.fancybox.min.js"></script>
+	<script src="assets/js/swiper-bundle.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
 	<script>
 		$('[data-fancybox="product-slider"], [data-fancybox="product-review"]').fancybox({
